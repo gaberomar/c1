@@ -1,0 +1,31 @@
+﻿
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cbplayer@latest/dist/CBPlayer.min.css" />
+<div id="cbplayer"></div>
+ <script> 
+function getParam ( sname )
+{
+ var params = location.search.substr(location.search.indexOf("?")+1);
+ var sval =  params.replace("sv=", "");
+ return sval;
+}
+var sv = getParam("sv");
+</script>
+<script src="https://cdn.jsdelivr.net/npm/cbplayer@latest"></script>
+<script>
+    new CBPlayer({
+        container: document.getElementById('cbplayer'),
+        autoplay: true,
+        video: {
+            url: sv,
+        },
+        pluginOptions: {
+            hls: {
+                p2pConfig: {
+                    live: false,
+                    // Other p2pConfig options provided by CDNBye
+                    // https://docs.cdnbye.com/#/API
+                }
+            }
+        },
+    });
+</script>
