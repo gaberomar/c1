@@ -1,7 +1,15 @@
 ﻿
 <html>
 <head>
-    <title>dplayer????+P2P??</title>
+   <script> 
+function getParam ( sname )
+{
+ var params = location.search.substr(location.search.indexOf("?")+1);
+ var sval =  params.replace("sv=", "");
+ return sval;
+}
+var sv = getParam("sv");
+</script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=11" />
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
@@ -22,7 +30,7 @@
         autoplay: true,
         hotkey: true,  // ????????????,???????
         video: {
-            url:url,
+            url: sv,
             // pic: 'loading_wap.gif',
         },
     });
