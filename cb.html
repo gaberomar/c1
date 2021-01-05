@@ -1,7 +1,8 @@
 ﻿
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cbplayer@latest/dist/CBPlayer.min.css" />
 <div id="cbplayer"></div>
- <script> 
+<script src="https://cdn.jsdelivr.net/npm/cbplayer@latest"></script>
+<script> 
 function getParam ( sname )
 {
  var params = location.search.substr(location.search.indexOf("?")+1);
@@ -10,7 +11,6 @@ function getParam ( sname )
 }
 var sv = getParam("sv");
 </script>
-<script src="https://cdn.jsdelivr.net/npm/cbplayer@latest"></script>
 <script>
     new CBPlayer({
         container: document.getElementById('cbplayer'),
@@ -28,4 +28,4 @@ var sv = getParam("sv");
             }
         },
     });
-</script>
+</script> 
